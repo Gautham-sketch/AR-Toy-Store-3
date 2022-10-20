@@ -1,0 +1,28 @@
+<html>
+    <head>
+        <title>PROJECT 170</title>
+        <script src="https://aframe.io/releases/0.6.0/aframe.min.js"></script>
+        <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" 
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"/>
+        <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+        <script src="https://raw.githack.com/fcor/arjs-gestures/master/dist/gestures.js"></script>
+        <link href="./style.css" rel="stylesheet"/>
+
+        <script src="./js/addButton.js"></script>
+        <script src="./js/addMarker.js"></script>
+        <script src="./js/markerHandler.js"></script>
+    </head>
+
+    <body>
+        <a-scene id="main-scene" vr-mode-ui="enabled: false" embedded arjs="sourceType: webcam; 
+        sourceWidth:1280; sourceHeight:960; 
+        displayWidth: 1280; displayHeight: 960; 
+        debugUIEnabled: false;" gesture-detector create-markers create-buttons>
+            <!-- Camera -->
+            <a-entity camera></a-entity>
+        </a-scene>
+
+        <div id="button-div" class="fixed-bottom"></div>
+    </body>
+</html>
